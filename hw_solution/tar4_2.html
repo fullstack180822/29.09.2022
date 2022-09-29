@@ -1,0 +1,39 @@
+c<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>targil 4</title>
+</head>
+<body>
+    <script>
+        x = parseInt(prompt('Enter 1-9,999 number: ')) 
+        document.write(`Number is: ${x}`)
+
+        if (x % 2 == 0) {
+            document.write('Zugi')
+        } 
+        else if (x == 3) {
+            document.write('3')
+        }
+        else  {
+            document.write('E-Zugi')
+        }
+
+        document.write(x % 2 == 0 ? 'Zugi' : x == 3 ? '3' : 'E-Zugi')
+
+        if (x <= 9) {
+            document.write(`${x} has 1 digit`)
+        } 
+        else if (x <= 99) {
+            document.write(`${x} has 2 digit`)
+        } 
+        else if (x <= 999) {
+            document.write(`${x} has 3 digit`)
+        }         
+        else {
+            document.write(`${x} has 4 digits [assuming 1-9,999]`)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -4,29 +4,39 @@
     <title>loops</title>
 </head>
 <body>
+    <hr>
+    <p>number #1: <input id="id_num1" type="number" /></p>
+    <p>number #2: <input id="id_num2" type="number" /></p>
+
+    
+    <p>click here : <button type="button" onclick="buttonClick()">Click me!</button></p>
     <script>
+        
+        function buttonClick() {
+            
+            a = parseInt(document.getElementById('id_num1').value)
+            b = parseInt(document.getElementById('id_num2').value)
 
-    a = parseInt(prompt('Enter num #1: ')) 
-    b = parseInt(prompt('Enter num #2: '))         
+            // 1
+            if (a > b) {
+                x = b
+                _top = a
+            }
+            else {
+                x = a
+                _top = b
+            }
+            // 2
+            x = a > b ? b : a
+            _top = a > b ? a : b
 
-    // 1
-    if (a > b) {
-        x = b
-        _top = a
-    }
-    else {
-        x = a
-        _top = b
-    }
-    // 2
-    x = a > b ? b : a
-    _top = a > b ? a : b
-
-    while (x <= _top) {
-        document.write(`${x} <br/>`)
-        x++
-    }       
+            while (x <= _top) {
+                document.write(`${x} <br/>`)
+                x++
+            }       
+        }
         
     </script>
 </body>
 </html>
+<!DOCTYPE html>
